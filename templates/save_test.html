@@ -1,0 +1,11 @@
+<!doctype html>
+<title>Hello from Flask</title>
+{% if not name %}
+	  <h1>Recipe not found</h1>
+{% else %}
+{% if success %}
+	  <h1>Recipe for {{ name }} saved to recipe box!</h1>
+	{% else %}
+	  <h1>Recipe for {{ name }} already present in recipe box.</h1>
+	{% endif %}
+{% endif %}

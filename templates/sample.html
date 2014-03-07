@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% for item in userList %}
+        <li>{{ item.username }} - {{ item.email }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

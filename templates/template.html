@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Nick's Webpage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='jquery-1.10.2.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-md-5 well well-xs">
+                <h1>User List</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <br>
+            {% for item in userList %}
+                <a class="btn btn-default" role="button">{{ item.username }} - {{ item.email }}</a><br><br>
+            {% endfor %}
+            <br><br>
+        </div>
+    </div>
+</body>
+</html>
